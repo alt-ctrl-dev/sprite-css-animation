@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  color: #fff;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to bottom, #020917, #101725);
+}
+
+.content {
+  display: flex;
+  min-height: 95vh;
+  line-height: 1.1;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;    
+  align-items: center;
+}
+
+.content h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.zoetrope {
+  --zoetrope-index: 0;
+  --zoetrope-count: 29;
+  --zoetrope-height: 100px;
+  --zoetrope-width: 100px;
+  height: var(--zoetrope-height);
+  width: var(--zoetrope-width);
+  outline: 1px red solid;
+}
+
+.bg {
+  background-image: url('/images/hearts-bg.png');
+  background-size: calc(var(--zoetrope-width) * var(--zoetrope-count)) var(--zoetrope-height);
+  background-position: calc(-1 *  calc(var(--zoetrope-width) * var(--zoetrope-index))) 0px;
+  animation: heartAnimationBg 2s steps(29, jump-none);
+  animation-play-state: paused;
+}
+
+.img {
+  object-fit: cover;
+  object-position: calc(-1 *  calc(var(--zoetrope-width) * var(--zoetrope-index))) 0px;;
+  animation: heartAnimation 2s steps(29, jump-none);
+  animation-play-state: paused;
+}
+
+@keyframes heartAnimation {
+  from {
+    object-position: 0px 0px;
+  }
+  to {
+    object-position: -2800px 0px;
+  }
+}
+
+@keyframes heartAnimationBg {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -2800px 0px;
+  }
+}
