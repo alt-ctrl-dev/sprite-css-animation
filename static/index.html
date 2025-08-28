@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Sprite CSS Animation">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="/styles/index.css" >
+    <link rel="stylesheet" href="<%= process.env.ASSET_PREFIX %>/styles/index.css" >
     <title><%= htmlPlugin.options.title %></title>
   </head>
   <body>
     <main class="container-fluid content">
         <p>Using Sprite as a zoetrope</p>
-      <img alt="zoetrope" class="zoetrope img" src="/images/hearts.png" loading="lazy" decoding="async" />
+      <img alt="zoetrope" class="zoetrope img" src="<%= process.env.ASSET_PREFIX %>/images/hearts.png" loading="lazy" decoding="async" />
       <!-- <div class="zoetrope bg"></div> -->
     </main>
     <footer>Credit: <a href="https://leanrada.com/notes/css-sprite-sheets/" target="_blank">https://leanrada.com/notes/css-sprite-sheets/</a></footer>
 
-    <link rel="preload" as="image" href="/images/hearts.png" fetchpriority="high">
-    <link rel="preload" as="image" href="/images/hearts-bg.png" fetchpriority="high">
+    <link rel="preload" as="image" href="<%= process.env.ASSET_PREFIX %>/images/hearts.png" fetchpriority="high">
+    <link rel="preload" as="image" href="<%= process.env.ASSET_PREFIX %>/images/hearts-bg.png" fetchpriority="high">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" loading="lazy" fetchpriority="low">
   </body>
