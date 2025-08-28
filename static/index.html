@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="preload" as="image" href="/images/hearts.png">
+    <link rel="preload" as="image" href="/images/hearts-bg.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sprite CSS Animation">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" defer>
+    <link rel="stylesheet" href="/styles/index.css">
     <title><%= htmlPlugin.options.title %></title>
   </head>
   <body>
-    <main id="<%= mountId %>" class="container-fluid">
-      <h1>Hello world!</h1>
+    <main class="container-fluid content">
+        <p>Using Sprite as a zoetrope</p>
+      <img alt="zoetrope" class="zoetrope img" src="/images/hearts.png" loading="lazy" decoding="async" />
+      <!-- <div class="zoetrope bg"></div> -->
     </main>
+    <footer>Credit: <a href="https://leanrada.com/notes/css-sprite-sheets/" target="_blank">https://leanrada.com/notes/css-sprite-sheets/</a></footer>
   </body>
 </html>
