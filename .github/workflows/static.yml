@@ -31,6 +31,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
 
       # If you use other package managers like yarn or pnpm,
       # you will need to install them first
