@@ -37,7 +37,7 @@ body {
 }
 
 .bg {
-  background-image: url('/images/hearts-bg.png');
+  background-image: url('../images/hearts-bg.png');
   background-size: calc(var(--zoetrope-width) * var(--zoetrope-count)) var(--zoetrope-height);
   background-position: calc(-1 *  calc(var(--zoetrope-width) * var(--zoetrope-index))) 0px;
   animation: heartAnimationBg 2s steps(29, jump-none);
