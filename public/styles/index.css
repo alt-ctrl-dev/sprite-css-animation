@@ -7,7 +7,7 @@ body {
 
 .content {
   display: flex;
-  min-height: 95vh;
+  min-height: 90vh;
   line-height: 1.1;
   text-align: center;
   flex-direction: column;
@@ -33,7 +33,6 @@ body {
   --zoetrope-width: 100px;
   height: var(--zoetrope-height);
   width: var(--zoetrope-width);
-  outline: 1px red solid;
 }
 
 .bg {
@@ -49,6 +48,7 @@ body {
   object-position: calc(-1 *  calc(var(--zoetrope-width) * var(--zoetrope-index))) 0px;;
   animation: heartAnimation 2s steps(29, jump-none);
   animation-play-state: paused;
+
 }
 
 @keyframes heartAnimation {
